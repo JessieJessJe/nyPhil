@@ -9,9 +9,9 @@
   font-weight: bold;
 }
 .title {
-  padding: 2em; 
+  padding: 1em; 
   margin:0;
-  font-size: 1.5em;
+  font-size: 1.2em;
   width:80vw;
   font-family: Garamond, sans-serif;
 }
@@ -27,8 +27,8 @@ div.tooltip {
   color: black;
   background-color:white;
   position: fixed;
-  top: 100px;
-  right: 80px;
+  top: 50px;
+  right: 40px;
   text-align: left;
   padding: 2px;
   font-size: 1.5em;
@@ -75,8 +75,8 @@ function romanize(num) {
 
 // set the dimensions and margins of the graph
 var margin = {top: 150, right: 25, bottom: 30, left: 100},
-  width = 4000 - margin.left - margin.right,
-  height = 1600 - margin.top - margin.bottom;
+  width = 3200 - margin.left - margin.right,
+  height = 1280 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -101,7 +101,7 @@ d3.json("holiday_clean.json", function(data) {
     .padding(0.05);
 
   svg.append("g")
-    .style("font-size", 15)
+    .style("font-size", 12)
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x).tickSize(0))
     .select(".domain").remove()
